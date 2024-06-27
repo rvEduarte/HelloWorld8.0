@@ -1664,6 +1664,18 @@ MonoBehaviour:
           m_StringArgument: Burat1
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1886507687}
+        m_TargetAssemblyTypeName: LevelMenu, Assembly-CSharp
+        m_MethodName: LoadLevelBtn
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Burat1
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &450700939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6292,7 +6304,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1699083676}
-  - component: {fileID: 1699083675}
   m_Layer: 0
   m_Name: AsyncManager
   m_TagString: Untagged
@@ -6300,21 +6311,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1699083675
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1699083674}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16fe729e95b2f294db1885b6d6b63c57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  loadingScreen: {fileID: 120333619}
-  loadingSlider: {fileID: 769151811}
-  progressText: {fileID: 1000596509}
 --- !u!4 &1699083676
 Transform:
   m_ObjectHideFlags: 0
@@ -6687,6 +6683,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttons: []
   levelButtons: {fileID: 1886507684}
+  loadingScreen: {fileID: 120333619}
+  loadingSlider: {fileID: 769151811}
+  progressText: {fileID: 1000596509}
 --- !u!1 &1886838502
 GameObject:
   m_ObjectHideFlags: 0
