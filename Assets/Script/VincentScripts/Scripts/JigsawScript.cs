@@ -19,30 +19,44 @@ public class JigsawScript : MonoBehaviour
 
     public Button button;
 
+    public bool isClicked = false;
+
     // Use this for initialization
-    private void Start()
+    void Start()
     {
-        jigsawPanel.GetComponent<GameObject>().transform.localScale = Vector2.zero;
-        jigsawPanel.SetActive(false);
+        jigsawPanel.GetComponent<CanvasRenderer>().transform.localScale = Vector2.zero;
+        //jigsawPanel.SetActive(false);
         pickUpText.SetActive(false);
         Greenportal.SetActive(false);
 
-        Button btn = button.GetComponent<Button>();
-        btn.onClick.AddListener(ClickTask);
+        
     }
 
     // Update is called once per frame
     private void Update()
     {
+        
 
         if (pickUpAllowed && Input.GetKeyDown(KeyCode.E))
         {
             PickUp();
             timer.isPicked = true;
-            jigsawPanel.GetComponent<GameObject>().transform.LeanScale(Vector2.one, 0.8f);
+            jigsawPanel.GetComponent<CanvasRenderer>().transform.LeanScale(Vector2.one, 0.8f);
+
+            Button btn = button.GetComponent<Button>();
+            btn.onClick.AddListener(ClickTask);
 
         }
             
+    }
+    void ClickTask()
+    {
+        if (isClicked == false)
+        {
+            Debug.Log("PEKPEK");
+            jigsawPanel.GetComponent<CanvasRenderer>().transform.LeanScale(Vector2.zero, 1f).setEaseInBack();
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -70,8 +84,5 @@ public class JigsawScript : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void ClickTask()
-    {
-        jigsawPanel.GetComponent<GameObject>().transform.LeanScale(Vector2.zero, 1f).setEaseInBack();
-    }
+    
 }
