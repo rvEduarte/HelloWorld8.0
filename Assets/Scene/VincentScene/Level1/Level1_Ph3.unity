@@ -31192,7 +31192,7 @@ MonoBehaviour:
     - 14                                                                                                                                               
       14
     - 1414
-    CorrestAnswer: 3
+    CorrestAnswer: 2
   - Questions: <color=#f7f7f7>What will be the output of the following?</color>  
       \n\n                                                                                                                                                                                                                                                                                                                                    
       <color=#05f711>Console</color><color=#f7f7f7>.</color><color=#fcdc5d>WriteLine</color><color=#f7f7f7>(</color><color=#54f798>8</color><color=#f5eae6>
