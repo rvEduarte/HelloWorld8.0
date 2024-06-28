@@ -13,8 +13,6 @@ public class LoadingScreenScript : MonoBehaviour
     
     public void LoadLevelBtn(string levelLoad)
     {
-       
-
         StartCoroutine(LoadLevelAsync(levelLoad));
     }
 

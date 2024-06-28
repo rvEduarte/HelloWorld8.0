@@ -10,6 +10,12 @@ public class LevelMenu : MonoBehaviour
     public Button[] buttons;
     public GameObject levelButtons;
 
+    // For loadinng screen
+    [SerializeField] private GameObject loadingScreen;
+    [SerializeField] private Slider loadingSlider;
+    [SerializeField] private Text progressText;
+
+
     private void Awake()
     {
         ButtonsArray();
@@ -38,5 +44,25 @@ public class LevelMenu : MonoBehaviour
         {
             buttons[i] = levelButtons.transform.GetChild(i).gameObject.GetComponent<Button>();
         }
+    }
+
+    // Loading Screen
+
+    public void LoadLevelBtn(string levelLoad)
+    {
+        StartCoroutine(LoadLevelAsync(levelLoad));
+    }
+
+    IEnumerator LoadLevelAsync(string levelLoad)
+    {
+        AsyncOperation loadOperation = SceneManager.LoadSceneAsync(levelLoad);
+        loadingScreen.SetActive(true);
+        while (!loadOperation.isDone)
+        {
+            float progressValue = Mathf.Clamp01(loadOperation.progress / 0.9f);
+            loadingSlider.value = progressValue;
+            progressText.text = progressValue * 100f + "%";
+            yield return null;
         }
+    }
 }

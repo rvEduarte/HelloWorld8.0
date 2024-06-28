@@ -49,7 +49,7 @@ public class Pause : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadSceneAsync(4);
+            SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }
