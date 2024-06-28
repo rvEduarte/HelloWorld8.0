@@ -12,8 +12,6 @@ public class NewBehaviourScript : MonoBehaviour
     public Slider masterVol, musicVol, sfxVol;
     public AudioMixer settingAudioMixer;
 
-    [SerializeField] Image soundOnIcon;
-    [SerializeField] Image soundOffIcon;
     private bool muted = false;
 
 
@@ -59,23 +57,7 @@ public class NewBehaviourScript : MonoBehaviour
         }
 
         Save();
-        UpdateButtonIcon();
     }
-
-    private void UpdateButtonIcon()
-    {
-        if (muted == false)
-        {
-            soundOnIcon.enabled = true;
-            soundOffIcon.enabled = false;
-        }
-        else
-        {
-            soundOnIcon.enabled = false;
-            soundOffIcon.enabled = true;
-        }
-    }
-
 
     private void Load()
     {
@@ -101,7 +83,7 @@ public class NewBehaviourScript : MonoBehaviour
         {
             Load();
         }
-        UpdateButtonIcon();
+
         AudioListener.pause = muted;
     }
 
