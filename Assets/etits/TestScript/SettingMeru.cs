@@ -48,18 +48,21 @@ public class SettingMeru : MonoBehaviour
 
         mainButtonPosition = mainButton.transform.position;
 
-        ResetPositions(); //reset all menu items position
+       // ResetPositions(); //reset all menu items position
 
     }
 
-    void ResetPositions()
+    /**
+     * void ResetPositions()
     {
         for (int i = 0; i < itemsCount; i++)
         {
             menuItems[i].trans.position = mainButtonPosition;
         }
 
-    }
+    } 
+    **/
+
     void ToggleMenu()
     {
         //open

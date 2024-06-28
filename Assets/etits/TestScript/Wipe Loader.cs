@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LevelLoader : MonoBehaviour
+public class WipeLoader : MonoBehaviour
 {
-
     public Animator transition;
 
     public float transitionTime;
-    
+
     void Update()
     {
-       if (Input.GetMouseButtonDown(0)) {
+        if (Input.GetMouseButtonDown(0))
+        {
             //LoadNextLevel();
         }
     }
@@ -25,7 +25,7 @@ public class LevelLoader : MonoBehaviour
     IEnumerator LoadLevel(int levelIndex)
     {
         // start transition
-        transition.SetTrigger("Start");
+        transition.SetTrigger("StartWipe");
 
         // waiting state
         yield return new WaitForSeconds(1);
@@ -33,5 +33,4 @@ public class LevelLoader : MonoBehaviour
         // loading scene
         SceneManager.LoadScene(levelIndex);
     }
-
 }
