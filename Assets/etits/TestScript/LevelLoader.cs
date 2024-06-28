@@ -25,7 +25,7 @@ public class LevelLoader : MonoBehaviour
     IEnumerator LoadLevel(int levelIndex)
     {
         // start transition
-        transition.SetTrigger("Start");
+        transition.SetTrigger("StartWipe");
 
         // waiting state
         yield return new WaitForSeconds(1);
