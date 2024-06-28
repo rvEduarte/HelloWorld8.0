@@ -17,7 +17,7 @@ public class JigsawScript : MonoBehaviour
 
     public RunningTimer timer;
 
-    public Button button;
+    public Button buttonJigsaw;
 
     public bool isClicked = false;
 
@@ -29,7 +29,9 @@ public class JigsawScript : MonoBehaviour
         pickUpText.SetActive(false);
         Greenportal.SetActive(false);
 
-        
+        Debug.Log("TITE");
+        Button btn = buttonJigsaw.GetComponent<Button>();
+        btn.onClick.AddListener(ClickTask);
     }
 
     // Update is called once per frame
@@ -39,11 +41,12 @@ public class JigsawScript : MonoBehaviour
 
         if (pickUpAllowed && Input.GetKeyDown(KeyCode.E))
         {
-            PickUp();
+            
             timer.isPicked = true;
             jigsawPanel.GetComponent<CanvasRenderer>().transform.LeanScale(Vector2.one, 0.8f);
 
-            Button btn = button.GetComponent<Button>();
+            Debug.Log("TITE");
+            Button btn = buttonJigsaw.GetComponent<Button>();
             btn.onClick.AddListener(ClickTask);
 
         }
@@ -55,6 +58,8 @@ public class JigsawScript : MonoBehaviour
         {
             Debug.Log("PEKPEK");
             jigsawPanel.GetComponent<CanvasRenderer>().transform.LeanScale(Vector2.zero, 1f).setEaseInBack();
+            PickUp();
+
         }
 
     }

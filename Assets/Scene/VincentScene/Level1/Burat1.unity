@@ -19191,7 +19191,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1653975626
 RectTransform:
   m_ObjectHideFlags: 0
@@ -57421,7 +57421,7 @@ MonoBehaviour:
   Greenportal: {fileID: 2518014220201703252}
   jigsawPanel: {fileID: 4103435488559784671}
   timer: {fileID: 1066730574}
-  button: {fileID: 901287715592759101}
+  buttonJigsaw: {fileID: 901287715592759101}
   isClicked: 0
 --- !u!222 &5222949022100899394
 CanvasRenderer:
@@ -58294,7 +58294,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!4 &6544940671719068853
 Transform:
