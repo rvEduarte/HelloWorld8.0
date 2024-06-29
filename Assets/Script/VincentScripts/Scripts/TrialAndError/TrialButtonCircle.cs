@@ -28,9 +28,20 @@ public class TrialButtonCircle : MonoBehaviour
     public CanvasRenderer yourHint;
 
     public bool clicked = true;
-    public bool condition;
+   // public bool condition;
 
     public CanvasRenderer rightFire;
+
+    public CanvasRenderer backgroundBorder;
+    public CanvasRenderer hintText;
+    public CanvasRenderer hintText2;
+    public CanvasRenderer bgLeftRightButton;
+    public CanvasRenderer rightButton;
+    public CanvasRenderer leftButton;
+    public CanvasRenderer bgTransparentButton;
+    public CanvasRenderer redButton;
+    public CanvasRenderer greentButton;
+    public CanvasRenderer startText;
 
     void Start()
     {
@@ -66,12 +77,6 @@ public class TrialButtonCircle : MonoBehaviour
             CanvasRenderer canvasRenderer8 = yourString.GetComponent<CanvasRenderer>();
             canvasRenderer8.cull = true;
 
-            // CanvasRenderer canvasRenderer999 = yourX.GetComponent<CanvasRenderer>();
-            //canvasRenderer999.cull = true;
-
-            //CanvasRenderer canvasRenderer9 = yourText1.GetComponent<CanvasRenderer>();
-            //canvasRenderer9.cull = true;
-
             CanvasRenderer canvasRenderer10 = yourText2.GetComponent<CanvasRenderer>();
             canvasRenderer10.cull = true;
 
@@ -95,10 +100,41 @@ public class TrialButtonCircle : MonoBehaviour
 
             CanvasRenderer canvasRenderer17 = rightFire.GetComponent<CanvasRenderer>();
             canvasRenderer17.cull = true;
+
+            CanvasRenderer canvasRenderer18 = backgroundBorder.GetComponent<CanvasRenderer>();
+            canvasRenderer18.cull = true;
+
+            CanvasRenderer canvasRenderer19 = hintText.GetComponent<CanvasRenderer>();
+            canvasRenderer19.cull = true;
+
+            CanvasRenderer canvasRenderer20 = hintText2.GetComponent<CanvasRenderer>();
+            canvasRenderer20.cull = true;
+
+            CanvasRenderer canvasRenderer21 = bgLeftRightButton.GetComponent<CanvasRenderer>();
+            canvasRenderer21.cull = true;
+
+            CanvasRenderer canvasRenderer22 = rightButton.GetComponent<CanvasRenderer>();
+            canvasRenderer22.cull = true;
+
+            CanvasRenderer canvasRenderer23 = leftButton.GetComponent<CanvasRenderer>();
+            canvasRenderer23.cull = true;
+
+            CanvasRenderer canvasRenderer24 = bgTransparentButton.GetComponent<CanvasRenderer>();
+            canvasRenderer24.cull = true;
+
+            CanvasRenderer canvasRenderer25 = redButton.GetComponent<CanvasRenderer>();
+            canvasRenderer25.cull = true;
+
+            CanvasRenderer canvasRenderer26 = greentButton.GetComponent<CanvasRenderer>();
+            canvasRenderer26.cull = true;
+
+            CanvasRenderer canvasRenderer27 = startText.GetComponent<CanvasRenderer>();
+            canvasRenderer27.cull = true;
+
         }
         else if (clicked == false)
         {
-            //Debug.Log("SHOW");
+            //SHOW
             CanvasRenderer canvasRenderer1 = yourDraggable1.GetComponent<CanvasRenderer>();
             canvasRenderer1.cull = false;
 
@@ -119,12 +155,6 @@ public class TrialButtonCircle : MonoBehaviour
 
             CanvasRenderer canvasRenderer8 = yourString.GetComponent<CanvasRenderer>();
             canvasRenderer8.cull = false;
-
-            //CanvasRenderer canvasRenderer999 = yourX.GetComponent<CanvasRenderer>();
-            //canvasRenderer999.cull = false;
-
-            //CanvasRenderer canvasRenderer9 = yourText1.GetComponent<CanvasRenderer>();
-            //canvasRenderer9.cull = false;
 
             CanvasRenderer canvasRenderer10 = yourText2.GetComponent<CanvasRenderer>();
             canvasRenderer10.cull = false;
@@ -149,6 +179,36 @@ public class TrialButtonCircle : MonoBehaviour
 
             CanvasRenderer canvasRenderer17 = rightFire.GetComponent<CanvasRenderer>();
             canvasRenderer17.cull = false;
+
+            CanvasRenderer canvasRenderer18 = backgroundBorder.GetComponent<CanvasRenderer>();
+            canvasRenderer18.cull = false;
+
+            CanvasRenderer canvasRenderer19 = hintText.GetComponent<CanvasRenderer>();
+            canvasRenderer19.cull = false;
+
+            CanvasRenderer canvasRenderer20 = hintText2.GetComponent<CanvasRenderer>();
+            canvasRenderer20.cull = false;
+
+            CanvasRenderer canvasRenderer21 = bgLeftRightButton.GetComponent<CanvasRenderer>();
+            canvasRenderer21.cull = false;
+
+            CanvasRenderer canvasRenderer22 = rightButton.GetComponent<CanvasRenderer>();
+            canvasRenderer22.cull = false;
+
+            CanvasRenderer canvasRenderer23 = leftButton.GetComponent<CanvasRenderer>();
+            canvasRenderer23.cull = false;
+
+            CanvasRenderer canvasRenderer24 = bgTransparentButton.GetComponent<CanvasRenderer>();
+            canvasRenderer24.cull = false;
+
+            CanvasRenderer canvasRenderer25 = redButton.GetComponent<CanvasRenderer>();
+            canvasRenderer25.cull = false;
+
+            CanvasRenderer canvasRenderer26 = greentButton.GetComponent<CanvasRenderer>();
+            canvasRenderer26.cull = false;
+
+            CanvasRenderer canvasRenderer27 = startText.GetComponent<CanvasRenderer>();
+            canvasRenderer27.cull = false;
         }
 
         

@@ -13,30 +13,58 @@ public class hintController : MonoBehaviour
 
     public StartHintButton startHintButton;
 
+    public Button rightButton;
+
+    public Button leftButton;
+
+
+    public void WriteLine()
+    {
+        string size = "50";
+        string font = "Bangers SDF";
+        string color = "blue";
+        hintText1.text = "<size=" + size + ">" + "<font=" + font + ">" + "C# Printing Text</font></size><color=" + color + ">\n\nWriteLine</color> - is like typing words on a typewriter and then pressing Enter after each line. It makes each new set of words start on a fresh line.";
+        
+    }
+
+    public void Write()
+    {
+        string size = "50";
+        string font = "Bangers SDF";
+        string color = "red";
+        hintText1.text = "<size=" + size + ">" + "<font=" + font + ">" + "C# Printing Text</font></size><color=" + color + ">" + "\n\nWrite</color> - is like typing words on a typewriter without pressing Enter. It just keeps adding words next to each other on the same line.";
+    }
+
+    public void Math()
+    {
+        string size = "50";
+        string font = "Bangers SDF";
+        string color = "#EF9A30";
+        hintText1.text = "<size=" + size + ">" + "<font=" + font + ">" + "C# Printing Text</font></size> \n\nYou can also output numbers, and perform <color=" + color + "> mathematical calculations"; // VALUE 2 
+    }
     public void RightButton()
     {
-        Debug.Log(number);
+        
         if (startHintButton == true)
         {
+            number++;
+            Debug.Log(number);
             if (number == 1)
             {
-                string size = "50";
-                string font = "Bangers SDF";
-                string color = "blue";
-                hintText1.text = "<size=" + size + ">" + "<font=" + font + ">" + "C# Printing Text</font></size><color=" + color + ">\n\nWriteLine</color> - is like typing words on a typewriter and then pressing Enter after each line. It makes each new set of words start on a fresh line.";
-                number++; // VALUE 2
+                WriteLine(); //GITNA
+                //number++; // VALUE 1
             }
             else if(number == 2)
             {
-                string size = "50";
-                string font = "Bangers SDF";
-                string color = "#EF9A30";
-                hintText1.text = "<size=" + size + ">" + "<font=" + font + ">" + "C# Printing Text</font></size> \n\nYou can also output numbers, and perform <color=" + color + "> mathematical calculations"; // VALUE 2    
+                Math(); // LAST
+                        // VALUE 2
             }
-            else
+            else if (number == 3)
             {
+                rightButton.enabled = false;
+                number = 2;                            //VALUE 2
                 Debug.Log("out of number RIGHT");
-                Debug.Log(number);
+                //Debug.Log(number);
             }
         }
     }
@@ -46,26 +74,23 @@ public class hintController : MonoBehaviour
         Debug.Log(number);
         if (startHintButton.isClicked == true)
         {
-            if(number == 1)
+            rightButton.enabled= true;
+            //number--;
+            Debug.Log(number);
+            if (number == 1)
             {
-                string size = "50";
-                string font = "Bangers SDF";
-                string color = "red";
-                hintText1.text = "<size=" + size + ">" + "<font=" + font + ">" + "C# Printing Text</font></size><color=" + color + ">" + "\n\nWrite</color> - is like typing words on a typewriter without pressing Enter. It just keeps adding words next to each other on the same line.";
+                Write();
             }
 
             else if (number == 2)
             {
-                string size = "50";
-                string font = "Bangers SDF";
-                string color = "blue";
-                hintText1.text = "<size=" + size + ">" + "<font=" + font + ">" + "C# Printing Text</font></size><color=" + color + ">\n\nWriteLine</color> - is like typing words on a typewriter and then pressing Enter after each line. It makes each new set of words start on a fresh line.";
+                WriteLine(); //GITNA
                 number--;  //VALUE 1
             }
             else
             {
                 Debug.Log("Out of number LEFT");
-                Debug.Log(number);
+                
             }
         }
     }

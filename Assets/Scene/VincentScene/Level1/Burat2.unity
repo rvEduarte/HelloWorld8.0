@@ -446,7 +446,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -10.289124, y: -6.7242126}
+  m_AnchoredPosition: {x: -10.2890625, y: -6.724243}
   m_SizeDelta: {x: -81.2631, y: -33.1667}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &332581531
@@ -3958,8 +3958,17 @@ MonoBehaviour:
   yourPanel: {fileID: 1354101991}
   yourHint: {fileID: 969399221}
   clicked: 0
-  condition: 0
   rightFire: {fileID: 848543350}
+  backgroundBorder: {fileID: 1886013686}
+  hintText: {fileID: 1133306885}
+  hintText2: {fileID: 440348259}
+  bgLeftRightButton: {fileID: 654796631}
+  rightButton: {fileID: 965561872}
+  leftButton: {fileID: 381819525}
+  bgTransparentButton: {fileID: 1970108005}
+  redButton: {fileID: 1349661516}
+  greentButton: {fileID: 1141524362}
+  startText: {fileID: 1204754059}
 --- !u!114 &1636505974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5916,6 +5925,8 @@ MonoBehaviour:
   hintText1: {fileID: 1133306884}
   number: 0
   startHintButton: {fileID: 969399222}
+  rightButton: {fileID: 965561870}
+  leftButton: {fileID: 381819523}
 --- !u!4 &2087221678
 Transform:
   m_ObjectHideFlags: 0
@@ -72237,8 +72248,17 @@ MonoBehaviour:
   yourPanel: {fileID: 5722695261653525971}
   yourHint: {fileID: 8133319673363300465}
   clicked: 0
-  condition: 0
   rightFire: {fileID: 7749819868034294473}
+  backgroundBorder: {fileID: 0}
+  hintText: {fileID: 0}
+  hintText2: {fileID: 0}
+  bgLeftRightButton: {fileID: 0}
+  rightButton: {fileID: 0}
+  leftButton: {fileID: 0}
+  bgTransparentButton: {fileID: 0}
+  redButton: {fileID: 0}
+  greentButton: {fileID: 0}
+  startText: {fileID: 0}
 --- !u!1 &8384460791085564766
 GameObject:
   m_ObjectHideFlags: 0

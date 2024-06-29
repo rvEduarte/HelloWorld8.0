@@ -30,7 +30,7 @@ public class StartHintButton : MonoBehaviour
         string font = "Bangers SDF";
         string color = "red";
         hintText1.text = "<size=" +size+ ">"+ "<font=" +font+ ">" + "C# Printing Text</font></size><color=" + color + ">" + "\n\nWrite</color> - is like typing words on a typewriter without pressing Enter. It just keeps adding words next to each other on the same line.";
-        hintController.number = 1;
+        hintController.number = 0;
         isClicked = true;
 
     }
