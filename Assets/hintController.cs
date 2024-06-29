@@ -24,18 +24,19 @@ public class hintController : MonoBehaviour
                 string font = "Bangers SDF";
                 string color = "blue";
                 hintText1.text = "<size=" + size + ">" + "<font=" + font + ">" + "C# Printing Text</font></size><color=" + color + ">\n\nWriteLine</color> - is like typing words on a typewriter and then pressing Enter after each line. It makes each new set of words start on a fresh line.";
-                number++;
+                number++; // VALUE 2
             }
             else if(number == 2)
             {
                 string size = "50";
                 string font = "Bangers SDF";
                 string color = "#EF9A30";
-                hintText1.text = "<size=" + size + ">" + "<font=" + font + ">" + "C# Printing Text</font></size> \n\nYou can also output numbers, and perform <color=" + color + "> mathematical calculations";
+                hintText1.text = "<size=" + size + ">" + "<font=" + font + ">" + "C# Printing Text</font></size> \n\nYou can also output numbers, and perform <color=" + color + "> mathematical calculations"; // VALUE 2    
             }
             else
             {
                 Debug.Log("out of number RIGHT");
+                Debug.Log(number);
             }
         }
     }
@@ -59,11 +60,12 @@ public class hintController : MonoBehaviour
                 string font = "Bangers SDF";
                 string color = "blue";
                 hintText1.text = "<size=" + size + ">" + "<font=" + font + ">" + "C# Printing Text</font></size><color=" + color + ">\n\nWriteLine</color> - is like typing words on a typewriter and then pressing Enter after each line. It makes each new set of words start on a fresh line.";
-                number--;
+                number--;  //VALUE 1
             }
             else
             {
                 Debug.Log("Out of number LEFT");
+                Debug.Log(number);
             }
         }
     }
