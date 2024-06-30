@@ -42,6 +42,7 @@ public class TrialButtonCircle : MonoBehaviour
     public CanvasRenderer redButton;
     public CanvasRenderer greentButton;
     public CanvasRenderer startText;
+    public CanvasRenderer endText;
 
     void Start()
     {
@@ -131,6 +132,9 @@ public class TrialButtonCircle : MonoBehaviour
             CanvasRenderer canvasRenderer27 = startText.GetComponent<CanvasRenderer>();
             canvasRenderer27.cull = true;
 
+            CanvasRenderer canvasRenderer28 = endText.GetComponent<CanvasRenderer>();
+            canvasRenderer28.cull = true;
+
         }
         else if (clicked == false)
         {
@@ -209,9 +213,10 @@ public class TrialButtonCircle : MonoBehaviour
 
             CanvasRenderer canvasRenderer27 = startText.GetComponent<CanvasRenderer>();
             canvasRenderer27.cull = false;
-        }
 
-        
+            CanvasRenderer canvasRenderer28 = endText.GetComponent<CanvasRenderer>();
+            canvasRenderer28.cull = false;
+        }        
     }
 
     void TaskOnClick()

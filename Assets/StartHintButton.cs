@@ -13,6 +13,7 @@ public class StartHintButton : MonoBehaviour
     public hintController hintController;
 
     public TextMeshProUGUI hintText1;
+    public TextMeshProUGUI hintText2;
     void Start()
     {
         Button btn = Button.GetComponent<Button>();
@@ -26,8 +27,10 @@ public class StartHintButton : MonoBehaviour
     }
     public void TaskOnClick()
     {
-        string value = "<size=50> <font=Bangers SDF>C# Printing Text\n\n</font></size><color=red>Write</color> - is like typing words on a typewriter without pressing Enter. It just keeps adding words next to each other on the same line.";
+        string value = "\n\n<color=red>Write</color> - is like typing words on a typewriter without pressing Enter. It just keeps adding words next to each other on the same line.";
         hintText1.text = value;
+        string value2 = "C# PRINTING TEXT";
+        hintText2.text = value2;
         hintController.number = 0;
         isClicked = true;
 

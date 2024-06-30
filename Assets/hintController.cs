@@ -19,9 +19,9 @@ public class hintController : MonoBehaviour
 
     private List<string> hints = new List<string>
     {
-        "<size=50> <font=Bangers SDF>C# Printing Text\n\n</font></size><color=red>Write</color> - is like typing words on a typewriter without pressing Enter. It just keeps adding words next to each other on the same line.",
-        "<size=50> <font=Bangers SDF>C# Printing Text\n\n</font></size><color=blue>WriteLine</color> - is like typing words on a typewriter and then pressing Enter after each line. It makes each new set of words start on a fresh line.",
-        "<size=50> <font=Bangers SDF>C# Printing Text</font></size>\n\nIn C#, You can also output numbers, and perform <color=green> mathematical calculations"
+        "\n\n<color=red>Write</color> - is like typing words on a typewriter without pressing Enter. It just keeps adding words next to each other on the same line.",
+        "\n\n<color=blue>WriteLine</color> - is like typing words on a typewriter and then pressing Enter after each line. It makes each new set of words start on a fresh line.",
+        "\n\nIn C#, You can also output numbers, and perform <color=orange> mathematical calculations"
         // Add more hints as needed
 
     };
