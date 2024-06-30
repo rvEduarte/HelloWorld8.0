@@ -26,10 +26,8 @@ public class StartHintButton : MonoBehaviour
     }
     public void TaskOnClick()
     {
-        string size = "50";
-        string font = "Bangers SDF";
-        string color = "red";
-        hintText1.text = "<size=" +size+ ">"+ "<font=" +font+ ">" + "C# Printing Text</font></size><color=" + color + ">" + "\n\nWrite</color> - is like typing words on a typewriter without pressing Enter. It just keeps adding words next to each other on the same line.";
+        string value = "<size=50> <font=Bangers SDF>C# Printing Text\n\n</font></size><color=red>Write</color> - is like typing words on a typewriter without pressing Enter. It just keeps adding words next to each other on the same line.";
+        hintText1.text = value;
         hintController.number = 0;
         isClicked = true;
 

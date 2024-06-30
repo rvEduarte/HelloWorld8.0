@@ -13,84 +13,50 @@ public class hintController : MonoBehaviour
 
     public StartHintButton startHintButton;
 
-    public Button rightButton;
+    //public Button rightButton;
 
-    public Button leftButton;
+    // public Button leftButton;
 
-
-    public void WriteLine()
+    private List<string> hints = new List<string>
     {
-        string size = "50";
-        string font = "Bangers SDF";
-        string color = "blue";
-        hintText1.text = "<size=" + size + ">" + "<font=" + font + ">" + "C# Printing Text</font></size><color=" + color + ">\n\nWriteLine</color> - is like typing words on a typewriter and then pressing Enter after each line. It makes each new set of words start on a fresh line.";
-        
-    }
+        "<size=50> <font=Bangers SDF>C# Printing Text\n\n</font></size><color=red>Write</color> - is like typing words on a typewriter without pressing Enter. It just keeps adding words next to each other on the same line.",
+        "<size=50> <font=Bangers SDF>C# Printing Text\n\n</font></size><color=blue>WriteLine</color> - is like typing words on a typewriter and then pressing Enter after each line. It makes each new set of words start on a fresh line.",
+        "<size=50> <font=Bangers SDF>C# Printing Text</font></size>\n\nIn C#, You can also output numbers, and perform <color=green> mathematical calculations"
+        // Add more hints as needed
 
-    public void Write()
-    {
-        string size = "50";
-        string font = "Bangers SDF";
-        string color = "red";
-        hintText1.text = "<size=" + size + ">" + "<font=" + font + ">" + "C# Printing Text</font></size><color=" + color + ">" + "\n\nWrite</color> - is like typing words on a typewriter without pressing Enter. It just keeps adding words next to each other on the same line.";
-    }
+    };
 
-    public void Math()
-    {
-        string size = "50";
-        string font = "Bangers SDF";
-        string color = "#EF9A30";
-        hintText1.text = "<size=" + size + ">" + "<font=" + font + ">" + "C# Printing Text</font></size> \n\nYou can also output numbers, and perform <color=" + color + "> mathematical calculations"; // VALUE 2 
-    }
+
     public void RightButton()
     {
-        
-        if (startHintButton == true)
+        Debug.Log("Number: " + number);
+        if (startHintButton.isClicked == true) // Assuming 'isClicked' is a boolean property in StartHintButton.
         {
-            number++;
-            Debug.Log(number);
-            if (number == 1)
+            if (number < hints.Count - 1)
             {
-                WriteLine(); //GITNA
-                //number++; // VALUE 1
+                number++;
+                hintText1.text = hints[number];
             }
-            else if(number == 2)
+            else
             {
-                Math(); // LAST
-                        // VALUE 2
-            }
-            else if (number == 3)
-            {
-                rightButton.enabled = false;
-                number = 2;                            //VALUE 2
-                Debug.Log("out of number RIGHT");
-                //Debug.Log(number);
+                Debug.Log("No more hints to the right.");
             }
         }
     }
 
     public void LeftButton()
     {
-        Debug.Log(number);
-        if (startHintButton.isClicked == true)
+        Debug.Log("Number: " + number);
+        if (startHintButton.isClicked == true) // Assuming 'isClicked' is a boolean property in StartHintButton.
         {
-            rightButton.enabled= true;
-            //number--;
-            Debug.Log(number);
-            if (number == 1)
+            if (number > 0)
             {
-                Write();
-            }
-
-            else if (number == 2)
-            {
-                WriteLine(); //GITNA
-                number--;  //VALUE 1
+                number--;
+                hintText1.text = hints[number];
             }
             else
             {
-                Debug.Log("Out of number LEFT");
-                
+                Debug.Log("No more hints to the left.");
             }
         }
     }
